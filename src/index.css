@@ -15,3 +15,9 @@ body {
 h2 {
   margin-bottom: 12px;
 }
+
+.worked-out {
+  background: #22c55e !important;
+  color: black !important;
+  border-radius: 8px;
+}

@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useWorkoutStore } from "../store/workoutStore";
 
+import WorkoutCalendar from "../components/WorkoutCalendar";
+
 export default function Home() {
   const { workouts, loadWorkouts } = useWorkoutStore();
 
@@ -11,6 +13,8 @@ export default function Home() {
   return (
     <div>
       <h2>Meus Treinos</h2>
+
+      <WorkoutCalendar />
 
       {workouts.length === 0 && <p>Nenhum treino registrado.</p>}
 

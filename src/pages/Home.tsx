@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useWorkoutStore } from "../store/workoutStore";
 
 import WorkoutCalendar from "../components/WorkoutCalendar";
+import { WeeklyChart } from "../components/WeeklyChart";
 
 export default function Home() {
   const { workouts, loadWorkouts } = useWorkoutStore();
@@ -24,6 +25,9 @@ export default function Home() {
           min
         </div>
       ))}
+
+      <h3>Seu progresso da semana</h3>
+      <WeeklyChart />
     </div>
   );
 }

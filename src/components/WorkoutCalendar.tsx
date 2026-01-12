@@ -5,12 +5,12 @@ import { useWorkoutStore } from "../store/workoutStore";
 export default function WorkoutCalendar() {
   const workouts = useWorkoutStore((state) => state.workouts);
 
-  const workoutDates = workouts.map((w) => new Date(w.date).toDateString());
+  const workoutDates = workouts.map((w) => w.date);
 
   return (
     <Calendar
       tileClassName={({ date }) => {
-        if (workoutDates.includes(date.toDateString())) {
+        if (workoutDates.includes(date.toLocaleDateString("en-CA"))) {
           return "worked-out";
         }
         return "";

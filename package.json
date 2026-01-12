@@ -19,6 +19,8 @@
     "eslint": "^9.39.2",
     "prettier": "^3.7.4",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react-calendar": "^6.0.0",
+    "react-dom": "^19.2.3",
+    "zustand": "^5.0.10"
   }
 }

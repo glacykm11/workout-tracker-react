@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+.app {
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 16px;
+  min-height: 100vh;
+}
+
+h2 {
+  margin-bottom: 12px;
+}

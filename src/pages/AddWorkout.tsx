@@ -1,16 +1,19 @@
 import { useState } from "react";
 import type { Workout } from "../types/workout";
+import Timer from "../components/Timer";
 
 export default function AddWorkout() {
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
+  const [duration, setDuration] = useState(0);
+
 
   function handleSave() {
     const workout: Workout = {
       id: crypto.randomUUID(),
       name,
       date,
-      duration: 0
+      duration: duration
     };
 
     console.log("Novo treino:", workout);
@@ -34,6 +37,8 @@ export default function AddWorkout() {
       />
 
       <button onClick={handleSave}>Salvar</button>
+
+      <Timer onFinish={setDuration} />
     </div>
   );
 }
